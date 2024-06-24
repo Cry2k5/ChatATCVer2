@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="546.0" prefWidth="353.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="549.0" prefWidth="377.0">
+         <children>
+            <AnchorPane fx:id="ap_main" layoutX="12.0" layoutY="10.0" prefHeight="527.0" prefWidth="330.0" stylesheets="@style.css">
+               <children>
+                  <FontAwesomeIcon fill="#2a827b" glyphName="ENVELOPE" layoutX="126.0" layoutY="74.0" size="5em" text="" />
+                  <Label layoutX="114.0" layoutY="84.0" prefHeight="37.0" prefWidth="89.0" text="Welcome" textFill="#187778">
+                     <font>
+                        <Font name="Noto Looped Thai UI Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <ScrollPane fx:id="sp_main" layoutX="14.0" layoutY="132.0" prefHeight="319.0" prefWidth="306.0" stylesheets="@style.css">
+                     <content>
+                        <VBox fx:id="vbox_messages" prefHeight="301.0" prefWidth="289.0" />
+                     </content>
+                  </ScrollPane>
+                  <TextField fx:id="tf_message" layoutX="14.0" layoutY="470.0" prefHeight="37.0" prefWidth="200.0" promptText="Send Your Message" styleClass="textfield" stylesheets="@style.css" />
+                  <Button fx:id="button_send" layoutX="225.0" layoutY="470.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="89.0" styleClass="btn" stylesheets="@style.css" text="Send" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

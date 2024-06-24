@@ -1,0 +1,28 @@
+.home{
+    -fx-background-radius: 25px;
+    -fx-border-radius: 25px;
+    -fx-border-width: 5px;
+    -fx-border-color: #3b88be;
+}
+.menu{
+    -fx-background-color: #3b88be;
+    -fx-background-radius: 25px 0px 0px 25px;
+    -fx-border-radius: 25px 0px 0px 25px;
+}
+.friend {
+    -fx-background-color: #e5e5e5;
+    -fx-background-radius: 0px 25px 25px 0px;
+    -fx-border-radius: 25px;
+}
+.information{
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 25px;
+    -fx-border-radius: 25px;
+}
+.image_avatar{
+    -fx-background-radius: 50%;
+    -fx-background-color: transparent;
+    -fx-border-radius: 50%;
+    -fx-border-color: transparent;
+    -fx-border-width: 10px;
+}

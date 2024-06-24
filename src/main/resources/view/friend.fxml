@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane onMouseClicked="#connectSocketclick" prefHeight="66.0" prefWidth="204.0" style="-fx-background-radius: 20px; -fx-border-radius: 20px; -fx-border-color: aqua; -fx-border-width: 2px;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FriendController">
+   <children>
+      <ImageView fx:id="friends_avatar" fitHeight="50.0" fitWidth="53.0" layoutX="14.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="friends_name" alignment="CENTER" layoutX="67.0" layoutY="22.0" prefHeight="30.0" prefWidth="137.0">
+         <font>
+            <Font name="Bauhaus 93" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

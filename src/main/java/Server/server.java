@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.sql.SQLException;
 
 
+
 public class server{
 
     
@@ -67,6 +68,5 @@ class ClientHandler extends Thread{
                 }
             }
         }
-
     }
 }

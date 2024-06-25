@@ -1,37 +1,31 @@
 package chatroom.TextMessages;
 
-
 import chatroom.database.DatabaseQuery;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
 public class TextMessagesService {
-    
-    private DatabaseQuery databaseQuery;
 
+    private DatabaseQuery databaseQuery;
 
     public TextMessagesService(DatabaseQuery databaseQuery) {
         this.databaseQuery = databaseQuery;
     }
 
-    public TextMessages getMessageById(int id) throws SQLException{
+    public TextMessages getMessageById(int id) throws SQLException {
         String query = "SELECT * from TextMessages where id=?";
-
-        ResultSet resultSet = databaseQuery.executeQuery(query,id);
-
+        ResultSet resultSet = databaseQuery.executeQuery(query, id);
         TextMessages messages = resultSetToTextMessagesObject(resultSet);
-
         return messages;
     }
 
-
-    public void addMessage(TextMessages message) throws SQLException{
-        String query = "insert into TextMessages(sender_id , sendTime ,message) values (?,?,?)";
-        this.databaseQuery.executeUpdate(query,message.getSenderId(),message.getSendTime(),message.getMessage());
-
+    public void addMessage(TextMessages message) throws SQLException {
+        String query = "insert into TextMessages(sender_id, sendTime, message) values (?, ?, ?)";
+        this.databaseQuery.executeUpdate(query, message.getSenderId(), message.getTimestamp(), message.getMessage());
     }
 
     public List<TextMessages> getAllMessages() throws SQLException {
@@ -48,13 +42,11 @@ public class TextMessagesService {
     }
 
     private TextMessages resultSetToTextMessagesObject(ResultSet result) throws SQLException {
-        TextMessages message = new TextMessages();
-        message.setId(result.getInt("id"));
-        message.setSenderId(result.getInt("sender_id"));
-        message.setSendTime(result.getTimestamp("sendTime"));
-        message.setMessage(result.getString("message"));
-        return message;
+        int id = result.getInt("id");
+        int senderId = result.getInt("sender_id");
+        Timestamp timestamp = result.getTimestamp("sendTime");
+        String messageText = result.getString("message");
+
+        return new TextMessages(id, senderId, timestamp, messageText);
     }
-
-
 }

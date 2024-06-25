@@ -1,29 +1,26 @@
 package chatroom.TextMessages;
 
-
 import java.sql.Timestamp;
 
-
 public class TextMessages {
-
     private int id;
     private int senderId;
-    private Timestamp sendTime;
+    private Timestamp timestamp;
     private String message;
 
-    public TextMessages() {
-    }
-
-
-    public TextMessages(int id, int senderId, Timestamp sendTime, String message) {
+    public TextMessages(int id, int senderId, Timestamp timestamp, String message) {
         this.id = id;
         this.senderId = senderId;
-        this.sendTime = sendTime;
+        this.timestamp = timestamp;
         this.message = message;
     }
 
+    public TextMessages() {
+
+    }
+
     public int getId() {
-        return this.id;
+        return id;
     }
 
     public void setId(int id) {
@@ -31,39 +28,26 @@ public class TextMessages {
     }
 
     public int getSenderId() {
-        return this.senderId;
+        return senderId;
     }
 
     public void setSenderId(int senderId) {
         this.senderId = senderId;
     }
 
-
-
-    public Timestamp getSendTime() {
-        return this.sendTime;
+    public Timestamp getTimestamp() {
+        return timestamp;
     }
 
-    public void setSendTime(Timestamp sendTime) {
-        this.sendTime = sendTime;
+    public void setTimestamp(Timestamp timestamp) {
+        this.timestamp = timestamp;
     }
 
     public String getMessage() {
-        return this.message;
+        return message;
     }
 
     public void setMessage(String message) {
         this.message = message;
     }
-
-    @Override
-    public String toString() {
-        return "{" +
-            " id='" + getId() + "'" +
-            ", senderId='" + getSenderId() + "'" +
-            ", sendTime='" + getSendTime() + "'" +
-            ", message='" + getMessage() + "'" +
-            "}";
-    }
-
 }

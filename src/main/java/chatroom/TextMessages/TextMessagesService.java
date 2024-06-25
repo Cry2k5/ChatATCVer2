@@ -24,8 +24,8 @@ public class TextMessagesService {
     }
 
     public void addMessage(TextMessages message) throws SQLException {
-        String query = "insert into TextMessages(sender_id, sendTime, message) values (?, ?, ?)";
-        this.databaseQuery.executeUpdate(query, message.getSenderId(), message.getTimestamp(), message.getMessage());
+        String query = "insert into TextMessages(senderName, receiverName, sendTime, message) values (?, ?, ?, ?)";
+        this.databaseQuery.executeUpdate(query, message.getSenderName(), message.getReceiverName(), message.getTimestamp(), message.getMessage());
     }
 
     public List<TextMessages> getAllMessages() throws SQLException {
@@ -42,11 +42,11 @@ public class TextMessagesService {
     }
 
     private TextMessages resultSetToTextMessagesObject(ResultSet result) throws SQLException {
-        int id = result.getInt("id");
-        int senderId = result.getInt("sender_id");
+        String senderName = result.getString("senderName");
+        String receiverName = result.getString("receiverName");
         Timestamp timestamp = result.getTimestamp("sendTime");
         String messageText = result.getString("message");
 
-        return new TextMessages(id, senderId, timestamp, messageText);
+        return new TextMessages(senderName, receiverName, timestamp, messageText);
     }
 }

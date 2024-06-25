@@ -73,8 +73,8 @@ public class ChatController implements Initializable {
         try {
             List<TextMessages> messages = XmlMessageHandler.readMessagesFromXml();
             for (TextMessages message : messages) {
-                if (user.getId() != message.getSenderId()) {
-                    AddLabel(message.getSenderId() + ":" + message.getMessage(), vbox_messages);
+                if (!user.getname().equals(message.getSenderName())) {
+                    AddLabel(message.getSenderName() + ":" + message.getMessage(), vbox_messages);
                 } else {
                     HBox hbox = new HBox();
                     hbox.setAlignment(Pos.CENTER_RIGHT);
@@ -117,7 +117,7 @@ public class ChatController implements Initializable {
                     hbox.getChildren().add(textFlow);
                     vbox_messages.getChildren().add(hbox);
                     tf_message.clear();
-                    TextMessages textMessages = new TextMessages(0, user.getId(), new Timestamp(System.currentTimeMillis()), Message);
+                    TextMessages textMessages = new TextMessages(user.getname(), "receiverName", new Timestamp(System.currentTimeMillis()), Message);
                     XmlMessageHandler.writeMessageToXml(textMessages);
                     client.SendMessageToServer(Message, user.getname());
                 }

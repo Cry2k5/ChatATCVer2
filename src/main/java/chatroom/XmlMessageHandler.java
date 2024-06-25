@@ -45,13 +45,13 @@ public class XmlMessageHandler {
 
             Element msg = document.createElement("message");
 
-            Element id = document.createElement("id");
-            id.appendChild(document.createTextNode(String.valueOf(message.getId())));
-            msg.appendChild(id);
+            Element senderName = document.createElement("senderName");
+            senderName.appendChild(document.createTextNode(message.getSenderName()));
+            msg.appendChild(senderName);
 
-            Element userId = document.createElement("userId");
-            userId.appendChild(document.createTextNode(String.valueOf(message.getSenderId())));
-            msg.appendChild(userId);
+            Element receiverName = document.createElement("receiverName");
+            receiverName.appendChild(document.createTextNode(message.getReceiverName()));
+            msg.appendChild(receiverName);
 
             Element text = document.createElement("text");
             text.appendChild(document.createTextNode(message.getMessage()));
@@ -77,6 +77,7 @@ public class XmlMessageHandler {
         }
     }
 
+
     public static List<TextMessages> readMessagesFromXml() {
         List<TextMessages> messages = new ArrayList<>();
 
@@ -99,12 +100,12 @@ public class XmlMessageHandler {
 
                 if (node.getNodeType() == Node.ELEMENT_NODE) {
                     Element element = (Element) node;
-                    int id = Integer.parseInt(element.getElementsByTagName("id").item(0).getTextContent());
-                    int userId = Integer.parseInt(element.getElementsByTagName("userId").item(0).getTextContent());
+                    String senderName = element.getElementsByTagName("senderName").item(0).getTextContent();
+                    String receiverName = element.getElementsByTagName("receiverName").item(0).getTextContent();
                     String text = element.getElementsByTagName("text").item(0).getTextContent();
                     Timestamp timestamp = Timestamp.valueOf(element.getElementsByTagName("timestamp").item(0).getTextContent());
 
-                    messages.add(new TextMessages(id, userId, timestamp, text));
+                    messages.add(new TextMessages(senderName, receiverName, timestamp, text));
                 }
             }
         } catch (Exception e) {
@@ -113,4 +114,5 @@ public class XmlMessageHandler {
 
         return messages;
     }
+
 }

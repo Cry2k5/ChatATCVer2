@@ -3,51 +3,31 @@ package chatroom.TextMessages;
 import java.sql.Timestamp;
 
 public class TextMessages {
-    private int id;
-    private int senderId;
+    private String senderName;
+    private String receiverName;
     private Timestamp timestamp;
     private String message;
 
-    public TextMessages(int id, int senderId, Timestamp timestamp, String message) {
-        this.id = id;
-        this.senderId = senderId;
+    public TextMessages(String senderName, String receiverName, Timestamp timestamp, String message) {
+        this.senderName = senderName;
+        this.receiverName = receiverName;
         this.timestamp = timestamp;
         this.message = message;
     }
 
-    public TextMessages() {
-
+    public String getSenderName() {
+        return senderName;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public int getSenderId() {
-        return senderId;
-    }
-
-    public void setSenderId(int senderId) {
-        this.senderId = senderId;
+    public String getReceiverName() {
+        return receiverName;
     }
 
     public Timestamp getTimestamp() {
         return timestamp;
     }
 
-    public void setTimestamp(Timestamp timestamp) {
-        this.timestamp = timestamp;
-    }
-
     public String getMessage() {
         return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
     }
 }

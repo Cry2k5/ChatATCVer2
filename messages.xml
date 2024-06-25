@@ -1,482 +1,66 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <messages>
-                                                
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <message>
-                                                                                                
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <id>0</id>
-                                                                                                
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <userId>1</userId>
-                                                                                                
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <text>alo</text>
-                                                                                                
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <timestamp>2024-06-25 18:24:20.155</timestamp>
-                                                                                            
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    </message>
-                                            
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <message>
-                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <id>0</id>
-                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <userId>1</userId>
-                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <text>nghe khoong</text>
-                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <timestamp>2024-06-25 18:33:01.674</timestamp>
-                                                                                    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    </message>
-                                        
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <message>
-                                                                                
-        
-        
-        
-        
-        
-        
-        
-        
-        <id>0</id>
-                                                                                
-        
-        
-        
-        
-        
-        
-        
-        
-        <userId>2</userId>
-                                                                                
-        
-        
-        
-        
-        
-        
-        
-        
-        <text>nghe ba</text>
-                                                                                
-        
-        
-        
-        
-        
-        
-        
-        
-        <timestamp>2024-06-25 18:33:08.906</timestamp>
-                                                                            
-    
-    
-    
-    
-    
-    
-    
-    
-    </message>
-                                    
-    
-    
-    
-    
-    
-    
-    
-    
-    <message>
-                                                                        
-        
-        
-        
-        
-        
-        
-        
-        <id>0</id>
-                                                                        
-        
-        
-        
-        
-        
-        
-        
-        <userId>2</userId>
-                                                                        
-        
-        
-        
-        
-        
-        
-        
-        <text>k</text>
-                                                                        
-        
-        
-        
-        
-        
-        
-        
-        <timestamp>2024-06-25 18:39:22.566</timestamp>
-                                                                    
-    
-    
-    
-    
-    
-    
-    
-    </message>
-                                
-    
-    
-    
-    
-    
-    
-    
-    <message>
-                                                                
-        
-        
-        
-        
-        
-        
-        <id>0</id>
-                                                                
-        
-        
-        
-        
-        
-        
-        <userId>2</userId>
-                                                                
-        
-        
-        
-        
-        
-        
-        <text>k</text>
-                                                                
-        
-        
-        
-        
-        
-        
-        <timestamp>2024-06-25 18:39:24.962</timestamp>
-                                                            
-    
-    
-    
-    
-    
-    
-    </message>
-                            
-    
-    
-    
-    
-    
-    
-    <message>
-                                                        
-        
-        
-        
-        
-        
-        <id>0</id>
-                                                        
-        
-        
-        
-        
-        
-        <userId>2</userId>
-                                                        
-        
-        
-        
-        
-        
-        <text>k</text>
-                                                        
-        
-        
-        
-        
-        
-        <timestamp>2024-06-25 18:39:26.586</timestamp>
-                                                    
-    
-    
-    
-    
-    
-    </message>
-                        
-    
-    
-    
-    
-    
-    <message>
-                                                
-        
-        
-        
-        
-        <id>0</id>
-                                                
-        
-        
-        
-        
-        <userId>2</userId>
-                                                
-        
-        
-        
-        
-        <text>k</text>
-                                                
-        
-        
-        
-        
-        <timestamp>2024-06-25 18:39:27.706</timestamp>
-                                            
-    
-    
-    
-    
-    </message>
-                    
-    
-    
-    
-    
-    <message>
-                                        
-        
-        
-        
-        <id>0</id>
-                                        
-        
-        
-        
-        <userId>2</userId>
-                                        
-        
-        
-        
-        <text>k</text>
-                                        
-        
-        
-        
-        <timestamp>2024-06-25 18:39:30.01</timestamp>
-                                    
-    
-    
-    
-    </message>
                 
-    
     
     
     <message>
                                 
         
         
-        <id>0</id>
+        <senderName>Anh</senderName>
                                 
         
         
-        <userId>2</userId>
+        <receiverName>receiverName</receiverName>
                                 
         
         
-        <text>lk</text>
-                                
-        
-        
-        <timestamp>2024-06-25 18:39:32.275</timestamp>
-                            
-    
-    
-    </message>
-            
-    
-    
-    <message>
-                        
-        
-        <id>0</id>
-                        
-        
-        <userId>1</userId>
-                        
-        
-        <text>vbvvvvv</text>
-                        
-        
-        <timestamp>2024-06-25 18:39:38.12</timestamp>
-                    
-    
-    </message>
-        
-    
-    <message>
-                
-        <id>0</id>
-                
-        <userId>1</userId>
-                
-        <text>ê mày</text>
-                
-        <timestamp>2024-06-25 21:06:59.824</timestamp>
-            
-    </message>
-    
-    <message>
-        <id>0</id>
-        <userId>2</userId>
         <text>lô</text>
-        <timestamp>2024-06-25 21:07:11.249</timestamp>
+                                
+        
+        
+        <timestamp>2024-06-26 01:38:49.956</timestamp>
+                            
+    
+    
+    </message>
+            
+    
+    
+    <message>
+                        
+        
+        <senderName>Chien</senderName>
+                        
+        
+        <receiverName>receiverName</receiverName>
+                        
+        
+        <text>nghe</text>
+                        
+        
+        <timestamp>2024-06-26 01:38:53.976</timestamp>
+                    
+    
+    </message>
+        
+    
+    <message>
+                
+        <senderName>Chien</senderName>
+                
+        <receiverName>receiverName</receiverName>
+                
+        <text>vvv</text>
+                
+        <timestamp>2024-06-26 01:38:56.71</timestamp>
+            
+    </message>
+    
+    <message>
+        <senderName>Anh</senderName>
+        <receiverName>receiverName</receiverName>
+        <text>j mài</text>
+        <timestamp>2024-06-26 01:39:00.838</timestamp>
     </message>
 </messages>

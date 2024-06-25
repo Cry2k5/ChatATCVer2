@@ -136,6 +136,12 @@ public class LoginController extends Thread{
 						System.out.println(result.getString("name"));
 						
 						data.name = result.getString("name");
+
+						String updateQuery = "UPDATE users SET active = 'online' WHERE email = ?";
+						PreparedStatement updateStatement = connect.prepareStatement(updateQuery);
+						updateStatement.setString(1, email);
+						updateStatement.executeUpdate();
+
 						User user = userService.getUserByEmail(email);
 
 						//Kết nối với giao diện chính khi đăng nhập thành công.

@@ -5,32 +5,75 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="546.0" prefWidth="353.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="705.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <AnchorPane prefHeight="549.0" prefWidth="377.0">
+      <AnchorPane prefHeight="600.0" prefWidth="705.0">
          <children>
-            <AnchorPane fx:id="ap_main" layoutX="12.0" layoutY="10.0" prefHeight="527.0" prefWidth="330.0" stylesheets="@style.css">
-               <children>
-                  <FontAwesomeIcon fill="#2a827b" glyphName="ENVELOPE" layoutX="126.0" layoutY="74.0" size="5em" text="" />
-                  <Label layoutX="114.0" layoutY="84.0" prefHeight="37.0" prefWidth="89.0" text="Welcome" textFill="#187778">
-                     <font>
-                        <Font name="Noto Looped Thai UI Bold" size="19.0" />
-                     </font>
-                  </Label>
-                  <ScrollPane fx:id="sp_main" layoutX="14.0" layoutY="132.0" prefHeight="319.0" prefWidth="306.0" stylesheets="@style.css">
-                     <content>
-                        <VBox fx:id="vbox_messages" prefHeight="301.0" prefWidth="289.0" />
-                     </content>
-                  </ScrollPane>
-                  <TextField fx:id="tf_message" layoutX="14.0" layoutY="470.0" prefHeight="37.0" prefWidth="200.0" promptText="Send Your Message" styleClass="textfield" stylesheets="@style.css" />
-                  <Button fx:id="button_send" layoutX="225.0" layoutY="470.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="89.0" styleClass="btn" stylesheets="@style.css" text="Send" />
-               </children>
-            </AnchorPane>
+            <BorderPane prefHeight="600.0" prefWidth="705.0">
+               <left>
+                  <AnchorPane prefHeight="600.0" prefWidth="215.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <ImageView fx:id="yourAvatar" fitHeight="100.0" fitWidth="100.0" layoutX="58.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="yourName" layoutX="41.0" layoutY="114.0" prefHeight="35.0" prefWidth="134.0" text="Label" textFill="#187778">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="161.0" text="People in chat group:" textFill="#187778">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <VBox fx:id="friendView" layoutX="20.0" layoutY="198.0" prefHeight="325.0" prefWidth="176.0" />
+                        <Button fx:id="refresh" layoutX="161.0" layoutY="158.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="28.0">
+                           <graphic>
+                              <FontAwesomeIcon glyphName="REFRESH" />
+                           </graphic>
+                        </Button>
+                        <Button fx:id="logout" layoutX="21.0" layoutY="552.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="38.0">
+                           <graphic>
+                              <ImageView fitHeight="23.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/logout.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="600.0" prefWidth="405.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="ap_main" layoutX="42.0" prefHeight="600.0" prefWidth="405.0" stylesheets="@style.css">
+                           <children>
+                              <FontAwesomeIcon fill="#2a827b" glyphName="ENVELOPE" layoutX="174.0" layoutY="65.0" size="5em" text="" />
+                              <Label layoutX="103.0" layoutY="74.0" prefHeight="38.0" prefWidth="198.0" text="Welcome To Chat ATC" textFill="#187778">
+                                 <font>
+                                    <Font name="Noto Looped Thai UI Bold" size="19.0" />
+                                 </font>
+                              </Label>
+                              <ScrollPane fx:id="sp_main" layoutX="28.0" layoutY="112.0" prefHeight="415.0" prefWidth="348.0" stylesheets="@style.css">
+                                 <content>
+                                    <VBox fx:id="vbox_messages" prefHeight="399.0" prefWidth="333.0" />
+                                 </content>
+                              </ScrollPane>
+                              <TextField fx:id="tf_message" layoutX="30.0" layoutY="540.0" prefHeight="37.0" prefWidth="200.0" promptText="Send Your Message" styleClass="textfield" stylesheets="@style.css" />
+                              <Button fx:id="button_send" layoutX="288.0" layoutY="540.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="89.0" styleClass="btn" stylesheets="@style.css" text="Send" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
          </children>
       </AnchorPane>
    </children>
